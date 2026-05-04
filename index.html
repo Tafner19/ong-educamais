@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG EducaMais - Transformando Vidas</title>
+    <title>ONG EducaMais</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
+
         header {
             background-color: #2c3e50;
             color: white;
-            padding: 2rem 0;
+            padding: 2rem;
             text-align: center;
         }
+
         .container {
             max-width: 900px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 1rem;
         }
+
         .card {
             background: white;
             padding: 1.5rem;
@@ -30,27 +33,36 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        h2 { color: #2980b9; }
+
+        h2 {
+            color: #2980b9;
+        }
+
         .btn {
             display: inline-block;
             background: #27ae60;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
+            margin-top: 10px;
         }
+
+        .btn:hover {
+            background: #219150;
+        }
+
         footer {
             text-align: center;
             padding: 1rem;
             background: #2c3e50;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 2rem;
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -59,29 +71,39 @@
 </header>
 
 <div class="container">
+
     <div class="card">
         <h2>Sobre Nós</h2>
-        <p>Somos um projeto dedicado a oferecer aulas de reforço, capacitação e cultura para jovens de comunidades carentes. Nosso sistema interno (C) nos ajuda a gerenciar voluntários, doações e as aulas diárias.</p>
+        <p>
+            Somos um projeto dedicado a oferecer aulas e apoio educacional.
+            Nosso sistema interno foi desenvolvido em linguagem C para gerenciar
+            doações e aulas.
+        </p>
     </div>
 
     <div class="card">
-        <h2>Nossos Impactos</h2>
-        <ul>
-            <li>Centenas de horas de aulas ministradas.</li>
-            <li>Alunos capacitados para o mercado de trabalho.</li>
-            <li>Doações 100% revertidas para infraestrutura educacional.</li>
-        </ul>
+        <h2>Sistema da ONG</h2>
+        <p>
+            Para fins acadêmicos, nosso sistema foi desenvolvido em C e pode ser acessado abaixo:
+        </p>
+
+            https://onlinegdb.com/Er7kvzHf3Q
+        
+        <a href="LINK_DO_ONLINEGDB" target="_blank" class="btn">
+            Acessar Sistema em C
+        </a>
     </div>
 
-    <div class="card" style="text-align: center;">
-        <h2>Apoie nossa Causa</h2>
-        <p>Entre em contato com nossa administração para fazer doações ou se tornar um professor voluntário!</p>
-        <a href="#" class="btn">Quero Ajudar</a>
+    <div class="card">
+        <h2>Apoie nossa causa</h2>
+        <p>Entre em contato para doar ou ser voluntário.</p>
+        <a href="#" class="btn">Quero ajudar</a>
     </div>
+
 </div>
 
 <footer>
-    <p>&copy; 2026 Projeto de Extensão Universitária - Desenvolvido no Github/Replit.</p>
+    <p>&copy; 2026 Projeto Acadêmico - ONG EducaMais</p>
 </footer>
 
 </body>
