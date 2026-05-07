@@ -8,28 +8,26 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; background-color: #f4f7f6; scroll-behavior: smooth; }
         
-        /* Header */
+        /* Header e Ajuste da Logo para Branco */
         header { background: #2c3e50; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo h2 { color: #ffffff; margin: 0; } /* Ajuste de cor solicitado */
+        
         nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; transition: 0.3s; }
         nav a:hover { color: #e67e22; }
-        
-        /* Banner */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1350&q=80'); 
-            background-size: cover; background-position: center; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; 
-        }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
 
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+        
         section { padding: 60px 10%; }
         h2 { text-align: center; color: #2c3e50; margin-bottom: 40px; position: relative; }
         h2::after { content: ''; width: 60px; height: 3px; background: #e67e22; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
         
-        /* Grid de Projetos/Aulas */
-        .classes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .card { border-radius: 12px; background: white; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: 0.3s; }
+        /* Grid de Projetos */
+        .classes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { border-radius: 12px; background: white; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: 0.3s; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-10px); }
         .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 20px; }
+        .card-content { padding: 20px; flex-grow: 1; }
         .card h3 { color: #e67e22; margin: 0 0 10px 0; }
 
         /* Container Flex para Doação e Contato */
@@ -39,7 +37,6 @@
         .bg-green h2 { color: white; }
         .bg-green h2::after { background: white; }
 
-        /* Formulários */
         .form-group { display: flex; flex-direction: column; margin-bottom: 15px; text-align: left; }
         .form-group label { font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
         input, textarea, select { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; }
@@ -50,17 +47,13 @@
         .btn-send { background: #2c3e50; color: white; }
         .btn-send:hover { background: #1a252f; transform: scale(1.02); }
 
-        /* Rodapé */
         footer { background: #1a252f; color: white; padding: 40px 10% 20px; text-align: center; }
         .social-icons { margin: 20px 0; }
         .social-icons a { color: white; font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
         .social-icons a:hover { color: #e67e22; }
         .footer-info { font-size: 0.9rem; opacity: 0.7; border-top: 1px solid #34495e; padding-top: 20px; margin-top: 20px; }
 
-        @media (max-width: 900px) {
-            .flex-container { flex-direction: column; }
-            .hero h1 { font-size: 2rem; }
-        }
+        @media (max-width: 900px) { .flex-container { flex-direction: column; } .hero h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -85,88 +78,69 @@
         <h2>O Que Desenvolvemos</h2>
         <div class="classes-grid">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Aula de informática">
-                <div class="card-content">
-                    <h3>Inclusão Digital</h3>
-                    <p>Aulas de informática básica e programação para jovens e idosos da comunidade.</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Inclusão Digital">
+                <div class="card-content"><h3>Inclusão Digital</h3><p>Aulas de informática básica e programação para jovens e idosos.</p></div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=600&q=80" alt="Crianças estudando">
-                <div class="card-content">
-                    <h3>Reforço Escolar</h3>
-                    <p>Acompanhamento pedagógico para crianças com dificuldades de aprendizagem.</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=600&q=80" alt="Reforço Escolar">
+                <div class="card-content"><h3>Reforço Escolar</h3><p>Acompanhamento pedagógico para crianças com dificuldades.</p></div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80" alt="Horta comunitária">
-                <div class="card-content">
-                    <h3>Horta Comunitária</h3>
-                    <p>Educação ambiental e produção de alimentos orgânicos para as famílias locais.</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80" alt="Horta Comunitária">
+                <div class="card-content"><h3>Horta Comunitária</h3><p>Educação ambiental e produção de alimentos orgânicos.</p></div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1552072805-2a9039d00e57?auto=format&fit=crop&w=600&q=80" alt="Esportes">
-                <div class="card-content">
-                    <h3>Artes Marciais (Judô)</h3>
-                    <p>Disciplina e saúde através do esporte para crianças e adolescentes.</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80" alt="Artes Marciais">
+                <div class="card-content"><h3>Artes Marciais (Judô)</h3><p>Disciplina, respeito e saúde através do esporte.</p></div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=600&q=80" alt="Apoio psicológico">
-                <div class="card-content">
-                    <h3>Apoio Psicológico</h3>
-                    <p>Atendimento profissional gratuito para membros da comunidade em vulnerabilidade.</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Apoio Psicológico">
+                <div class="card-content"><h3>Apoio Psicológico</h3><p>Atendimento profissional gratuito para a comunidade.</p></div>
             </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1459749411177-042180ce673c?auto=format&fit=crop&w=600&q=80" alt="Culinária">
-                <div class="card-content">
-                    <h3>Culinária Criativa</h3>
-                    <p>Capacitação em gastronomia para geração de renda e empreendedorismo.</p>
-                </div>
+                <div class="card-content"><h3>Culinária Criativa</h3><p>Capacitação em gastronomia para geração de renda.</p></div>
             </div>
         </div>
     </section>
 
     <section id="acoes">
         <div class="flex-container">
-            
             <div class="flex-item bg-green">
                 <h2>Faça uma Doação</h2>
                 <p style="text-align: center; margin-bottom: 25px;">Sua doação garante os materiais para nossas oficinas.</p>
-                <form>
+                <form id="form-doacao">
                     <div class="form-group">
                         <label>Nome do Doador</label>
-                        <input type="text" placeholder="Nome completo" required>
+                        <input type="text" name="data[Nome]" placeholder="Nome completo" required>
                     </div>
                     <div class="form-group">
                         <label>E-mail</label>
-                        <input type="email" placeholder="seu@email.com" required>
+                        <input type="email" name="data[Email]" placeholder="seu@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Valor que deseja doar (R$)</label>
-                        <input type="number" step="0.01" placeholder="Ex: 50.00" required>
+                        <label>Valor (R$)</label>
+                        <input type="number" name="data[Valor]" step="0.01" placeholder="Ex: 50.00" required>
                     </div>
-                    <button type="submit" class="btn btn-donate"><i class="fas fa-heart"></i> Doar via PIX / Cartão</button>
+                    <button type="submit" class="btn btn-donate"><i class="fas fa-heart"></i> Registrar Doação</button>
                 </form>
             </div>
 
             <div class="flex-item">
                 <h2>Fale Conosco</h2>
                 <p style="text-align: center; margin-bottom: 25px;">Preencha os campos e retornaremos em breve.</p>
-                <form>
+                <form id="form-contato">
                     <div class="form-group">
                         <label>Seu Nome</label>
-                        <input type="text" placeholder="Nome completo" required>
+                        <input type="text" name="data[Nome]" placeholder="Nome completo" required>
                     </div>
                     <div class="form-group">
                         <label>Seu E-mail</label>
-                        <input type="email" placeholder="seu@email.com" required>
+                        <input type="email" name="data[Email]" placeholder="seu@email.com" required>
                     </div>
                     <div class="form-group">
                         <label>Assunto</label>
-                        <select required>
+                        <select name="data[Assunto]" required>
                             <option value="">Selecione uma opção...</option>
                             <option value="duvidas">Tirar Dúvidas</option>
                             <option value="voluntario">Quero ser Voluntário</option>
@@ -175,31 +149,57 @@
                     </div>
                     <div class="form-group">
                         <label>Sua Mensagem</label>
-                        <textarea rows="4" placeholder="Como podemos te ajudar?" required></textarea>
+                        <textarea name="data[Mensagem]" rows="4" placeholder="Como podemos te ajudar?" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-send">Enviar para nossa Equipe</button>
                 </form>
             </div>
-
         </div>
     </section>
 
     <footer>
         <div class="logo"><h2>Mãos que Transformam</h2></div>
         <p>Conectando corações para mudar realidades.</p>
-        
         <div class="social-icons">
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
-
         <div class="footer-info">
-            <p>Rua da Solidariedade, 123 - Bairro Esperança | Contato: (11) 99999-9999</p>
-            <p>&copy; 2024 Mãos que Transformam - Organização Sem Fins Lucrativos.</p>
+            <p>&copy; 2026 Mãos que Transformam - Organização Sem Fins Lucrativos.</p>
         </div>
     </footer>
 
+    <script>
+        function configurarFormulario(idForm) {
+            const form = document.getElementById(idForm);
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const textoOriginal = btn.innerHTML;
+                btn.innerText = "Enviando...";
+                btn.disabled = true;
+
+                fetch('https://sheetdb.io/api/v1/ubxcazcizez47', {
+                    method: 'POST',
+                    body: new FormData(form),
+                })
+                .then(response => response.json())
+                .then((data) => {
+                    alert('Recebemos suas informações! Obrigado.');
+                    form.reset();
+                })
+                .catch(error => {
+                    alert('Ops! Ocorreu um erro ao enviar. Tente novamente.');
+                })
+                .finally(() => {
+                    btn.innerHTML = textoOriginal;
+                    btn.disabled = false;
+                });
+            });
+        }
+        configurarFormulario('form-doacao');
+        configurarFormulario('form-contato');
+    </script>
 </body>
 </html>
