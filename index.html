@@ -38,4 +38,168 @@
         .bg-green h2::after { background: white; }
 
         .form-group { display: flex; flex-direction: column; margin-bottom: 15px; text-align: left; }
-        .form-group label { font-weight: bold; margin-bottom: 5px
+        .form-group label { font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+        input, textarea, select { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; }
+        
+        .btn { padding: 15px; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; text-transform: uppercase; }
+        .btn-donate { background: white; color: #27ae60; }
+        .btn-donate:hover { background: #f0f0f0; transform: scale(1.02); }
+        .btn-send { background: #2c3e50; color: white; }
+        .btn-send:hover { background: #1a252f; transform: scale(1.02); }
+
+        footer { background: #1a252f; color: white; padding: 40px 10% 20px; text-align: center; }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+        .social-icons a:hover { color: #e67e22; }
+        .footer-info { font-size: 0.9rem; opacity: 0.7; border-top: 1px solid #34495e; padding-top: 20px; margin-top: 20px; }
+
+        @media (max-width: 900px) { .flex-container { flex-direction: column; } .hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h2>Mãos que Transformam</h2></div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#aulas">Nossos Trabalhos</a>
+            <a href="#acoes">Participe</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Transformando o Futuro Hoje</h1>
+            <p>Uma ONG dedicada ao desenvolvimento da nossa comunidade.</p>
+        </div>
+    </section>
+
+    <section id="aulas">
+        <h2>O Que Desenvolvemos</h2>
+        <div class="classes-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Inclusão Digital">
+                <div class="card-content"><h3>Inclusão Digital</h3><p>Aulas de informática básica e programação para jovens e idosos.</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=600&q=80" alt="Reforço Escolar">
+                <div class="card-content"><h3>Reforço Escolar</h3><p>Acompanhamento pedagógico para crianças com dificuldades.</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80" alt="Horta Comunitária">
+                <div class="card-content"><h3>Horta Comunitária</h3><p>Educação ambiental e produção de alimentos orgânicos.</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80" alt="Artes Marciais">
+                <div class="card-content"><h3>Artes Marciais (Judô)</h3><p>Disciplina, respeito e saúde através do esporte.</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Apoio Psicológico">
+                <div class="card-content"><h3>Apoio Psicológico</h3><p>Atendimento profissional gratuito para a comunidade.</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="Culinária Criativa">
+                <div class="card-content"><h3>Culinária Criativa</h3><p>Capacitação em gastronomia para geração de renda.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="acoes">
+        <div class="flex-container">
+            <div class="flex-item bg-green">
+                <h2>Faça uma Doação</h2>
+                <p style="text-align: center; margin-bottom: 25px;">Sua doação garante os materiais para nossas oficinas.</p>
+                <form id="form-doacao">
+                    <div class="form-group">
+                        <label>Nome do Doador</label>
+                        <input type="text" name="data[Nome]" placeholder="Nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="data[Email]" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Valor (R$)</label>
+                        <input type="number" name="data[Valor]" step="0.01" placeholder="Ex: 50.00" required>
+                    </div>
+                    <button type="submit" class="btn btn-donate"><i class="fas fa-heart"></i> Registrar Doação</button>
+                </form>
+            </div>
+
+            <div class="flex-item">
+                <h2>Fale Conosco</h2>
+                <p style="text-align: center; margin-bottom: 25px;">Preencha os campos e retornaremos em breve.</p>
+                <form id="form-contato">
+                    <div class="form-group">
+                        <label>Seu Nome</label>
+                        <input type="text" name="data[Nome]" placeholder="Nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Seu E-mail</label>
+                        <input type="email" name="data[Email]" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Assunto</label>
+                        <select name="data[Assunto]" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="duvidas">Tirar Dúvidas</option>
+                            <option value="voluntario">Quero ser Voluntário</option>
+                            <option value="visita">Agendar Visita</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Sua Mensagem</label>
+                        <textarea name="data[Mensagem]" rows="4" placeholder="Como podemos te ajudar?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-send">Enviar para nossa Equipe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo"><h2>Mãos que Transformam</h2></div>
+        <p>Conectando corações para mudar realidades.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2026 Mãos que Transformam - Organização Sem Fins Lucrativos.</p>
+        </div>
+    </footer>
+
+    <script>
+        function configurarFormulario(idForm) {
+            const form = document.getElementById(idForm);
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const textoOriginal = btn.innerHTML;
+                btn.innerText = "Enviando...";
+                btn.disabled = true;
+
+                fetch('https://sheetdb.io/api/v1/ubxcazcizez47', {
+                    method: 'POST',
+                    body: new FormData(form),
+                })
+                .then(response => response.json())
+                .then((data) => {
+                    alert('Recebemos suas informações! Obrigado.');
+                    form.reset();
+                })
+                .catch(error => {
+                    alert('Ops! Ocorreu um erro ao enviar. Tente novamente.');
+                })
+                .finally(() => {
+                    btn.innerHTML = textoOriginal;
+                    btn.disabled = false;
+                });
+            });
+        }
+        configurarFormulario('form-doacao');
+        configurarFormulario('form-contato');
+    </script>
+</body>
+</html>
